@@ -1,0 +1,98 @@
+.container {
+  padding: 120px 0;
+
+  .content {
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    .main {
+      display: flex;
+
+      justify-content: space-between;
+
+      .descriptionContainer {
+        width: 45%;
+
+        .aboutTitle {
+          display: flex;
+
+          color: #1a1a3e;
+          font-size: 1.6rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          line-height: 2rem;
+
+          margin: 0 0 0 15%;
+          letter-spacing: 1px;
+        }
+
+        .title {
+          display: flex;
+
+          color: #ff6364;
+          font-size: 2.4rem;
+
+          margin: 2rem 0 0 10%;
+        }
+
+        .description {
+          color: #333;
+          font-size: 1.4rem;
+          line-height: 2.4rem;
+
+          margin: 2rem 0;
+        }
+      }
+
+      .imgContainer {
+        width: 50%;
+
+        position: relative;
+
+        .imgWrapper {
+          width: 90%;
+          height: 100%;
+          overflow: hidden;
+
+          margin-left: auto;
+
+          position: relative;
+
+          border-radius: 10px;
+
+          .img {
+            object-fit: cover;
+          }
+        }
+
+        .logoContainer {
+          width: 210px;
+          height: 120px;
+
+          padding: 30px 15px;
+          box-sizing: border-box;
+
+          position: absolute;
+
+          bottom: -12%;
+          left: -5%;
+
+          background-color: #f4f4f4;
+          border-radius: 10px;
+
+          .logoWrapper {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            .logo {
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

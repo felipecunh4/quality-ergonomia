@@ -7,7 +7,7 @@ function Banner() {
   const yellowDivider = [scss.divider, scss.yellow];
 
   return (
-    <div className={scss.container}>
+    <section id="home" className={scss.container}>
       <div className={scss.gradient} />
       <div className={bgCircleTop.join(' ')} />
       <div className={scss.content}>
@@ -21,7 +21,7 @@ function Banner() {
         <div className={yellowDivider.join(' ')} />
       </div>
       <div className={bgCircleBottom.join(' ')} />
-    </div>
+    </section>
   );
 }
 

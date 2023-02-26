@@ -1,3 +1,5 @@
+@use '~/styles/breakpoints' as *;
+
 .container {
   overflow-x: clip;
 
@@ -19,10 +21,10 @@
   }
 
   .bgCircle {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
 
-    border: 80px solid #ff6364;
+    border: 20px solid #ff6364;
 
     position: absolute;
 
@@ -30,23 +32,23 @@
     border-radius: 50%;
 
     &.top {
-      top: -37%;
-      right: -10%;
+      top: -15%;
+      right: -15%;
     }
 
     &.bottom {
-      bottom: -40%;
+      bottom: -17%;
       left: -15%;
     }
   }
 
   .content {
-    padding: 200px 0 150px;
+    padding: 80px 0 30px;
 
     position: relative;
 
     .divider {
-      width: 450px;
+      width: min(450px, 30vw);
       height: 8px;
 
       &.orange {
@@ -61,24 +63,89 @@
     }
 
     .title {
-      width: 555px;
+      width: min(555px, 80vw);
 
       color: #fff;
+      text-align: center;
 
-      font-size: 4.5rem;
+      font-size: 2.5rem;
       font-weight: normal;
-      line-height: 6.5rem;
+      line-height: 4.5rem;
 
       margin: 40px auto;
 
       .strong {
-        font-size: 5rem;
+        display: block;
+
+        font-size: 3rem;
         font-weight: bold;
 
         .bigger {
           display: block;
 
-          font-size: 6.5rem;
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+@include from720 {
+  .container {
+    .bgCircle {
+      width: 200px;
+      height: 200px;
+
+      border-width: 40px;
+
+      &.top {
+        top: -37%;
+        right: -10%;
+      }
+
+      &.bottom {
+        bottom: -40%;
+        left: -15%;
+      }
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .bgCircle {
+      width: 300px;
+      height: 300px;
+
+      border-width: 80px;
+
+      &.top {
+        top: -37%;
+        right: -10%;
+      }
+
+      &.bottom {
+        bottom: -40%;
+        left: -15%;
+      }
+    }
+
+    .content {
+      padding: 200px 0 150px;
+
+      .title {
+        font-size: 4.5rem;
+        font-weight: normal;
+        line-height: 6.5rem;
+
+        .strong {
+          display: inline;
+
+          font-size: 5rem;
+
+          .bigger {
+            font-size: 6.5rem;
+          }
         }
       }
     }

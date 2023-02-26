@@ -5,7 +5,7 @@ import scss from './Cards.module.scss';
 function Cards() {
   const renderCards = () =>
     cards.map((card) => (
-      <div className={scss.card}>
+      <div className={scss.card} key={card.id}>
         <div className={scss.iconWrapper}>
           <card.icon className={scss.icon} />
         </div>

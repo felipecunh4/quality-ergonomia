@@ -1,15 +1,21 @@
+@use '~/styles/breakpoints' as *;
+
 .container {
+  max-width: 87%;
+
+  margin: 0 auto;
   margin-top: 89px;
 
   .content {
     display: flex;
+    flex-direction: column;
 
     .card {
       display: flex;
       flex: 1 1 0;
       flex-basis: 33.333%;
 
-      margin-right: 44px;
+      margin-bottom: 21px;
 
       padding: 1.6rem 1rem;
 
@@ -53,3 +59,14 @@
   }
 }
 
+@include from1024 {
+  .container {
+    .content {
+      flex-direction: row;
+
+      .card {
+        margin: 0 44px 0 0;
+      }
+    }
+  }
+}

@@ -26,6 +26,12 @@
         }
       }
     }
+
+    .mobileContent {
+      .iconButton {
+        color: #000;
+      }
+    }
   }
 
   .imgWrapper {
@@ -92,6 +98,8 @@
     transition: all 0.3s ease;
 
     .iconButton {
+      color: #fff;
+
       padding: 0;
       border: 0;
 

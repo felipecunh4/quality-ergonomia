@@ -1,0 +1,84 @@
+.container {
+  margin: 34px -7% 0 0;
+
+  .swiperWrapper {
+    .swipe {
+      height: auto;
+
+      .card {
+        height: 69%;
+
+        margin-left: 13px;
+      }
+    }
+  }
+
+  .progressBar {
+    max-width: 3px;
+    height: 3px;
+
+    position: absolute;
+
+    background: transparent;
+
+    animation: progressAnimation 6s linear infinite;
+  }
+
+  .stepperContainer {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 34px;
+    padding-bottom: 34px;
+
+    .navigationWrapper {
+      display: flex;
+
+      justify-content: flex-end;
+
+      .button {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px;
+        border: 2px solid #fff;
+
+        background: transparent;
+        outline: 0;
+        border-radius: 50%;
+
+        &.leftButton {
+          margin: 0 10px 0 0;
+
+          .icon {
+            transform: rotate(180deg);
+          }
+        }
+
+        .icon {
+          width: 32px;
+
+          > path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

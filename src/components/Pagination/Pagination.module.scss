@@ -1,0 +1,36 @@
+.btnDot {
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+
+    background-color: #e0e0e0;
+    border-radius: 50px;
+
+    transition: all 0.3s ease;
+
+
+    &.active {
+      width: 30px;
+
+      border: 0;
+
+      background-color: #ff6364;
+
+      opacity: 1;
+    }
+  }
+}

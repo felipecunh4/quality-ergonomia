@@ -1,0 +1,97 @@
+@use '~/styles/breakpoints' as *;
+
+.container {
+  overflow-x: clip;
+
+  padding-bottom: 55px;
+
+  position: relative;
+
+  .linesIcon {
+    display: none;
+
+    position: absolute;
+    top: -55px;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .bgBottom {
+    position: absolute;
+
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #1a1a3e;
+  }
+
+  .content {
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    .title {
+      color: #ff6364;
+      text-align: center;
+      font-size: 4rem;
+
+      margin: 0;
+    }
+
+    .cardsWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 21px;
+
+      margin-top: 55px;
+
+      .card {
+        max-width: 305px;
+      }
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .linesIcon {
+      display: block;
+    }
+
+    .bgCircle {
+      width: 300px;
+      height: 300px;
+
+      border: 100px solid #000;
+
+      position: absolute;
+      right: -80px;
+      bottom: -15%;
+      z-index: 2;
+
+      border-radius: 50%;
+    }
+
+    .content {
+      max-width: min(87%, 1280px);
+
+      z-index: 5;
+    }
+  }
+}
+
+@include from1280 {
+  .container {
+    .content {
+      .cardsWrapper {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

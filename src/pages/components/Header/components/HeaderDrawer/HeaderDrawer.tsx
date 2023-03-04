@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import { IHeaderDrawerProps } from './types';
+import Drawer from '~/components/Drawer/Drawer';
 
-import Drawer from '../Drawer/Drawer';
+import { IHeaderDrawerProps } from './types';
 
 import scss from './HeaderDrawer.module.scss';
 
